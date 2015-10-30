@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PassShootScore.Heirarchy;
+using PassShootScore.Managers;
 using SFML.System;
 using SprunthFramework;
 
@@ -17,7 +18,7 @@ namespace PassShootScore
         public PSSGame(Vector2u screenSize) : base(screenSize)
         {
             worldDB = new WorldDatabase();
-    
+
 
         }
 
@@ -25,8 +26,11 @@ namespace PassShootScore
         {
             textGenSystem = new TextGenSystem();
 
+            Manager.Initialize();
+
             // test
-            var league1 = new League(true);
+            Manager.ActiveLeagueManager.CreateLeague(true);
+
         }
     }
 }

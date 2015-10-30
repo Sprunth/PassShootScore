@@ -14,7 +14,8 @@ namespace PassShootScore
         public readonly Random Rand;
 
         private Dictionary<Guid, Player> allPlayers;
-        private Dictionary<Guid, Team> allTeams; 
+        private Dictionary<Guid, Team> allTeams;
+        private Dictionary<Guid, League> allLEagues; 
 
         public WorldDatabase()
         {
@@ -22,6 +23,7 @@ namespace PassShootScore
 
             allPlayers = new Dictionary<Guid, Player>();
             allTeams = new Dictionary<Guid, Team>();
+            allLEagues = new Dictionary<Guid, League>();
 
             ActiveWorldDatabase = this;
         }
@@ -34,6 +36,11 @@ namespace PassShootScore
         public void AddTeam(Team t)
         {
             allTeams.Add(t.ID, t);
+        }
+
+        public void AddLeague(League l)
+        {
+            allLEagues.Add(l.ID, l);
         }
     }
 }

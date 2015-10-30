@@ -11,21 +11,17 @@ namespace PassShootScore.Heirarchy
     {
         private List<Team> teams; 
 
-        public League(bool generateTeams = false)
+        public League()
         {
             Name = TextGenSystem.ActiveTextGenSystem.GenerateNewLeagueName();
             teams = new List<Team>();
 
             Debug.WriteLine(string.Format("New League created: {0}", Name), "League");
-
-            if (generateTeams)
-                GenerateTeams(6);
         }
 
-        private void GenerateTeams(int count)
+        public void AddTeam(Team t)
         {
-            for (var i = 0; i < count; i++)
-                teams.Add(new Team(true));
+            teams.Add(t);
         }
     }
 }

@@ -81,6 +81,10 @@
   <ItemGroup>
     <Compile Include="Heirarchy\League.cs" />
     <Compile Include="Heirarchy\Player.cs" />
+    <Compile Include="Managers\LeagueManager.cs" />
+    <Compile Include="Managers\Manager.cs" />
+    <Compile Include="Managers\PlayerManager.cs" />
+    <Compile Include="Managers\TeamManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PSSGame.cs" />
