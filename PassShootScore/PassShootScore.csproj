@@ -52,6 +52,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gwen">
+      <HintPath>..\..\..\..\..\..\..\vs13lib\GwenDotNet\GwenCS\Binaries\Gwen.dll</HintPath>
+    </Reference>
+    <Reference Include="Gwen.Renderer.SFML">
+      <HintPath>..\..\..\..\..\..\..\vs13lib\GwenDotNet\GwenCS\Binaries\Gwen.Renderer.SFML.dll</HintPath>
+    </Reference>
     <Reference Include="Rant">
       <HintPath>..\..\..\..\..\..\..\vs13lib\Rant\Rant.dll</HintPath>
     </Reference>
@@ -67,18 +73,24 @@
     <Reference Include="sfmlnet-window-2">
       <HintPath>..\..\..\..\..\..\..\vs13lib\SFML.Net-2.2\lib\sfmlnet-window-2.dll</HintPath>
     </Reference>
-    <Reference Include="SprunthFramework">
+    <Reference Include="SprunthFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SprunthFramework\SprunthFramework\bin\x86\Debug\SprunthFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tao.OpenGl">
+      <HintPath>..\..\..\..\..\..\..\vs13lib\GwenDotNet\GwenCS\lib\Tao\Tao.OpenGl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Displays\PlayerView.cs" />
     <Compile Include="Heirarchy\League.cs" />
     <Compile Include="Heirarchy\Player.cs" />
     <Compile Include="Managers\LeagueManager.cs" />
@@ -95,6 +107,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="OpenSans.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultSkin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

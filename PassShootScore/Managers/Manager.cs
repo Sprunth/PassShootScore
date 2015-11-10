@@ -21,7 +21,7 @@ namespace PassShootScore.Managers
 
         protected readonly WorldDatabase WorldDB;
 
-        public Manager()
+        protected Manager()
         {
             WorldDB = WorldDatabase.ActiveWorldDatabase;
         }

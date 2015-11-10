@@ -15,7 +15,8 @@ namespace PassShootScore
 
         private Dictionary<Guid, Player> allPlayers;
         private Dictionary<Guid, Team> allTeams;
-        private Dictionary<Guid, League> allLEagues; 
+        private Dictionary<Guid, League> allLeagues;
+        public IEnumerable<League> AllLeagues { get { return allLeagues.Values; } }  
 
         public WorldDatabase()
         {
@@ -23,7 +24,7 @@ namespace PassShootScore
 
             allPlayers = new Dictionary<Guid, Player>();
             allTeams = new Dictionary<Guid, Team>();
-            allLEagues = new Dictionary<Guid, League>();
+            allLeagues = new Dictionary<Guid, League>();
 
             ActiveWorldDatabase = this;
         }
@@ -40,7 +41,22 @@ namespace PassShootScore
 
         public void AddLeague(League l)
         {
-            allLEagues.Add(l.ID, l);
+            allLeagues.Add(l.ID, l);
+        }
+
+        public Player GetPlayerByID(Guid id)
+        {
+            return allPlayers[id];
+        }
+
+        public Team GetTeamByID(Guid id)
+        {
+            return allTeams[id];
+        }
+
+        public League GetLeagueByID(Guid id)
+        {
+            return allLeagues[id];
         }
     }
 }

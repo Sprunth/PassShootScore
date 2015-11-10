@@ -9,19 +9,19 @@ namespace PassShootScore.Heirarchy
 {
     class League : WorldObject
     {
-        private List<Team> teams; 
+        public List<Team> Teams { get; private set; }
 
         public League()
         {
             Name = TextGenSystem.ActiveTextGenSystem.GenerateNewLeagueName();
-            teams = new List<Team>();
+            Teams = new List<Team>();
 
             Debug.WriteLine(string.Format("New League created: {0}", Name), "League");
         }
 
         public void AddTeam(Team t)
         {
-            teams.Add(t);
+            Teams.Add(t);
         }
     }
 }
