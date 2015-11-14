@@ -1,3 +1,5 @@
+Note: This project is being re-written. Check out [this repo](https://github.com/Sprunth/Pass-Shoot-Score/tree/master)
+
 # PassShootScore
 A football management game, inspired by the Football Manager series.
 
